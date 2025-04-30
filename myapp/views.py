@@ -1,5 +1,6 @@
-from django.shortcuts import render
-from django.http import HttpResponse # For feedback submission
+from django.shortcuts import redirect, render
+
+from .forms import FeedbackForm # For feedback submission
 
 def landing(request):
     return render(request, 'myapp/landing.html')
@@ -13,19 +14,18 @@ def team(request):
 def demo(request):
     return render(request, 'myapp/demo.html')
 
-def feedback(request):
-    if request.method == 'POST':    
+def feedback_view(request):
+    if request.method == 'POST':
+        form = FeedbackForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('thank_you')
+    else:
+        form = FeedbackForm()
+    return render(request, 'myapp/feedback.html', {'form': form})
 
-        # Handle form submission (e.g. save feedback or email it)
-        name = request.POST.get('name')
-        email = request.POST.get('email')
-        message = request.POST.get('message')
-
-        # for now, well print ot console, later we'll save to our Database or email
-        print(f"Feedback from {name} | {email}: {message}")
-        return HttpResponse ("Thank you for your feedback! The team will review it shortly.")
-    
-    return render(request, 'myapp/feedback.html')
+def thank_you(request):
+    return render(request, 'myapp/thank_you.html')
 
 
 # Create your views here.

@@ -1,0 +1,79 @@
+{% extends 'myapp/index.html' %}
+{% block content %}
+
+<!-- Hero Section -->
+<section class="hero is-warning">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">Bicycle Alarm System</h1>
+            <h2 class="subtitle">Protect your bike with cutting-edge motion detection</h2>
+            <a href="/demo/" class="button is-light">See the Demo</a>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="section has-background-dark">
+    <div class="container">
+        <h2 class="title is-3 has-text-centered has-text-white">Why Choose Our Bicycle Alarm?</h2>
+        <div class="columns is-multiline">
+            <div class="column is-one-third">
+                <div class="box has-background-grey-dark has-text-white has-text-centered">
+                    <span class="icon is-large has-text-warning">
+                        <i class="fas fa-bell fa-2x"></i>
+                    </span>
+                    <h3 class="title is-5">Motion Alerts</h3>
+                    <p>Instant notifications when movement is detected near your bike.</p>
+                </div>
+            </div>
+            <div class="column is-one-third">
+                <div class="box has-background-grey-dark has-text-white has-text-centered">
+                    <span class="icon is-large has-text-warning">
+                        <i class="fas fa-mobile-alt fa-2x"></i>
+                    </span>
+                    <h3 class="title is-5">Mobile App</h3>
+                    <p>Control your alarm system directly from your smartphone.</p>
+                </div>
+            </div>
+            <div class="column is-one-third">
+                <div class="box has-background-grey-dark has-text-white has-text-centered">
+                    <span class="icon is-large has-text-warning">
+                        <i class="fas fa-battery-full fa-2x"></i>
+                    </span>
+                    <h3 class="title is-5">Long Battery Life</h3>
+                    <p>Engineered for extended use with low power consumption.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How It Works Section -->
+<section class="section">
+    <div class="container">
+        <h2 class="title is-3 has-text-centered">How It Works</h2>
+        <div class="columns is-vcentered">
+            <div class="column is-half">
+                <p class="has-text-centered">
+                    Our Bicycle Alarm System uses advanced motion detection technology to detect any suspicious activity around your bike. When triggered, it sends an immediate notification to your phone, keeping you informed in real time.
+                </p>
+            </div>
+            <div class="column is-half">
+                <figure class="image is-4by3">
+                    <img src="https://via.placeholder.com/400x300.png?text=How+It+Works" alt="How It Works">
+                </figure>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action Section -->
+<section class="section has-background-warning">
+    <div class="container has-text-centered">
+        <h2 class="title is-3">Ready to Protect Your Bike?</h2>
+        <p class="subtitle">Get started today with our cutting-edge Bicycle Alarm System.</p>
+        <a href="/demo/" class="button is-dark is-large">See the Demo</a>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,69 @@
+{% extends 'myapp/index.html' %}
+{% block content %}
+
+<!-- Hero Section for Demo -->
+<section class="hero is-info">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">See the Bicycle Alarm System in Action</h1>
+            <h2 class="subtitle">Experience how our motion detection technology protects your bike.</h2>
+        </div>
+    </div>
+</section>
+
+<!-- Demo Video Section -->
+<section class="section">
+    <div class="container">
+        <h2 class="title is-3 has-text-centered">Watch the Demo</h2>
+        <div class="columns is-vcentered">
+            <div class="column is-half">
+                <figure class="image is-16by9">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/your-demo-video-id" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </figure>
+            </div>
+            <div class="column is-half">
+                <p>
+                    Our Bicycle Alarm System uses cutting-edge motion detection to keep your bike secure. Watch this demo to see how quickly the system responds to motion and how it interacts with the mobile app to send you real-time alerts.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How to Set Up Section -->
+<section class="section has-background-light">
+    <div class="container">
+        <h2 class="title is-3 has-text-centered">How to Set Up the Alarm</h2>
+        <div class="columns is-multiline">
+            <div class="column is-one-third">
+                <div class="box">
+                    <h3 class="title is-5">Step 1: Install the Device</h3>
+                    <p>Attach the motion sensor to your bike's frame in a secure location.</p>
+                </div>
+            </div>
+            <div class="column is-one-third">
+                <div class="box">
+                    <h3 class="title is-5">Step 2: Connect to the App</h3>
+                    <p>Download our app and sync it with your alarm system for remote control.</p>
+                </div>
+            </div>
+            <div class="column is-one-third">
+                <div class="box">
+                    <h3 class="title is-5">Step 3: Activate & Protect</h3>
+                    <p>Activate the alarm and monitor your bike's status directly from your phone.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Test the Alarm Section -->
+<section class="section">
+    <div class="container has-text-centered">
+        <h2 class="title is-3">Test the Alarm</h2>
+        <p class="subtitle">Try triggering the alarm yourself to see how fast it reacts to motion detection. Click below to simulate an alert.</p>
+        <a href="#" class="button is-warning is-large">Simulate Alert</a>
+    </div>
+</section>
+
+{% endblock %}

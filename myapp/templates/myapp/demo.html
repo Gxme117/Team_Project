@@ -62,8 +62,23 @@
     <div class="container has-text-centered">
         <h2 class="title is-3">Test the Alarm</h2>
         <p class="subtitle">Try triggering the alarm yourself to see how fast it reacts to motion detection. Click below to simulate an alert.</p>
+
+        <!-- Simulate Alert button -->
         <a href="#" class="button is-warning is-large">Simulate Alert</a>
+
+        <!-- Recent Alerts Section -->
+        <div class="section mt-6">
+            <h3 class="title is-4">Recent Alerts:</h3>
+            <ul style="list-style-type: disc; text-align: left; display: inline-block;">
+                {% for note in notifications %}
+                    <li>{{ note.timestamp|date:"Y-m-d H:i" }} – {{ note.message }}</li>
+                {% empty %}
+                    <li>No alerts yet.</li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
 </section>
+
 
 {% endblock %}
